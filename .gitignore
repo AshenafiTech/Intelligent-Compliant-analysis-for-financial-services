@@ -1,1 +1,23 @@
+# Ignore data folder
+data/
+
+# Ignore any CSV files anywhere in the project
+*.csv
+
+# Ignore Jupyter notebook checkpoints
+.ipynb_checkpoints/
+
+# Optionally, ignore environment files
+*.env
+.env*
 venv/
+
+# Ignore Colab metadata if needed
+*.ipynb_metadata
+
+# macOS or Linux temp files
+.DS_Store
+
+# Python cache
+__pycache__/
+*.pyc
