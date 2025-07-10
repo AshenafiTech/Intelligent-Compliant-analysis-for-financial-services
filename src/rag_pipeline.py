@@ -4,13 +4,13 @@ import numpy as np
 from sentence_transformers import SentenceTransformer
 
 # Load vector store and metadata
-index = faiss.read_index("vector_store/complaints_faiss.index")
-with open("vector_store/metadata.pkl", "rb") as f:
+index = faiss.read_index("notebooks/vector_store/complaints_faiss.index")
+with open("notebooks/vector_store/metadata.pkl", "rb") as f:
     metadatas = pickle.load(f)
 
 # Load original data for source retrieval
 import pandas as pd
-df = pd.read_csv("data/filtered_complaints.csv")
+df = pd.read_csv("data/processed/filtered_complaints.csv")
 
 # Load embedding model
 model_name = "sentence-transformers/all-MiniLM-L6-v2"
