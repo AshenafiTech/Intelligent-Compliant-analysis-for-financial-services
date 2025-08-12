@@ -42,7 +42,6 @@ dim = embeddings.shape[1]
 index = faiss.IndexFlatL2(dim)
 index.add(embeddings)
 
-# Persist vector store and metadata
 os.makedirs("vector_store", exist_ok=True)
 faiss.write_index(index, "vector_store/complaints_faiss.index")
 with open("vector_store/metadata.pkl", "wb") as f:
